@@ -7,7 +7,8 @@ We've included an 'icons' folder for your use.
 We recommend using [Tomorrow.io Weather API](https://www.tomorrow.io/weather-api/) or [OpenWeatherMap](https://openweathermap.org/api/one-call-4) for fetching the data.
 Note: Due to the browser's Same-Origin Policy, direct client-side requests to these APIs will be blocked and will expose your API keys. To keep keys secure, route requests through a same-origin proxy:
 * **Development Proxy:** Configure a proxy in your dev server (e.g., Vite's `server.proxy`) to forward requests to the API during local development.
-* **Backend Server / Proxy:** If using a dedicated backend (e.g., Express) or a full-stack framework (e.g., Next.js, Nuxt), fetch the data server-side where Same-Origin Policy restrictions do not apply.
+* **Meta-framework:** If you're using a meta-framework (e.g., Next.js, Nuxt, Analog, Astro), you can use a custom API-endpoint or server function.
+* **Backend Server:** You can pass requests through a self-hosted backend (e.g., Express, Hono, Fastify) to proxy requests to the real API.
 
 **Things to consider:**
 
