@@ -4,8 +4,11 @@ Create a weather widget for use in the webbrowser that provides us with a weathe
 
 We've included an 'icons' folder for your use.
 
-We recommend using [Climacell weather-api](https://www.climacell.co/weather-api/) or [Openweathermap](https://openweathermap.org/api/one-call-apia) for fetching the data.
-Note; the API's do not provide CORS headers, you will need to either use a public [CORS anywhere](https://cors-anywhere.herokuapp.com/) service (see also: [link](https://www.karolisram.com/cors-from-anywhere/)), or [include your own](https://www.npmjs.com/package/cors-anywhere) within the project
+We recommend using [Tomorrow.io Weather API](https://www.tomorrow.io/weather-api/) or [OpenWeatherMap](https://openweathermap.org/api/one-call-4) for fetching the data.
+Note: Due to the browser's Same-Origin Policy, direct client-side requests to these APIs will be blocked and will expose your API keys. To keep keys secure, route requests through a same-origin proxy:
+* **Development Proxy:** Configure a proxy in your dev server (e.g., Vite's `server.proxy`) to forward requests to the API during local development.
+* **Meta-framework:** If you're using a meta-framework (e.g., Next.js, Nuxt, Analog, Astro), you can use a custom API-endpoint or server function.
+* **Backend Server:** You can pass requests through a self-hosted backend (e.g., Express, Hono, Fastify) to proxy requests to the real API.
 
 **Things to consider:**
 
